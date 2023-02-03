@@ -22,14 +22,14 @@ public class Basket : MonoBehaviour
         pos.x = mousePos3D.x;
         this.transform.position = pos;
     }
-    //void OnCollisionEnter(Collision coll) 
-    //{
-    //    GameObject collidedWith=coll.gameObject;
-    //    if (collidedWith.CompareTag("Apple")) 
-    //    {
-    //        Destroy(collidedWith);
-    //    }
+    void OnCollisionEnter(Collision coll)
+    {
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.CompareTag("Apple"))
+        {
+            Destroy(collidedWith);
+        }
 
-    //    scoreCounter.score += 50;
-    //}
+        //scoreCounter.score += 50;
+    }
 }
