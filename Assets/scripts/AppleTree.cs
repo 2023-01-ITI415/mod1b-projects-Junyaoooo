@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 {
+    [Header("Inscribed")]
     public float leftAndRightEdge = 19f;
     public float chanceToChangeDirection;
     public GameObject applePrefab;
@@ -31,17 +32,17 @@ public class AppleTree : MonoBehaviour
         {
             speed = Mathf.Abs(speed);
         }
-        else if (pos.x > leftAndRightEdge) 
+        else if (pos.x > leftAndRightEdge)
         {
-            speed=-Mathf.Abs(speed);
+            speed = -Mathf.Abs(speed);
         }
 
     }
     void FixedUpdate() 
     {
-        if (Random.value < chanceToChangeDirection) 
-        {
-            speed *= 1;
-        }
+        //if (Random.value < chanceToChangeDirection) 
+        //{
+        //    speed *= 1;
+        //}
     }
 }
