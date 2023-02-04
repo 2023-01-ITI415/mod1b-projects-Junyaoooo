@@ -31,5 +31,6 @@ public class Basket : MonoBehaviour
         }
 
         scoreCounter.score += 50;
+        HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
     }
 }
