@@ -18,10 +18,4 @@ public class Goal : MonoBehaviour
             mat.color = ccc;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
