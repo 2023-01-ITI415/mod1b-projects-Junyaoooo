@@ -7,7 +7,7 @@ public class CannonControl : MonoBehaviour
     //Timer
     private float time;
     //Interval between spawning firepoint
-    private float timeInterval = 0.4f; 
+    private float timeInterval = 0.31f; 
     //firepoint create place
     public Transform firePoint;
 

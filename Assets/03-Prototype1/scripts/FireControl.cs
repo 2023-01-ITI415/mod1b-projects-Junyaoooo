@@ -14,6 +14,18 @@ public class FireControl : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != "fish") 
+        {
+            return;
+        }
+
+
+        FishControl fishControl = collision.GetComponent<FishControl>();
+        fishControl.Damage(3);
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

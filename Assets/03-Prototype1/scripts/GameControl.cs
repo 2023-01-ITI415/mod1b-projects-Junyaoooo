@@ -62,6 +62,10 @@ public class GameControl : MonoBehaviour
             {
                 fishControl.currentDir = FishControl.FishDirection.Left;
             }
+
+
+            //set fish hp (randomlly from 5-9)
+            fishControl.Hp = Random.Range(5,9);
         }
     }
 }

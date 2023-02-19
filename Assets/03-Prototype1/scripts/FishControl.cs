@@ -22,6 +22,13 @@ public class FishControl : MonoBehaviour
     //now fish Direction
     public FishDirection currentDir = FishDirection.Left;
 
+
+    public float Hp 
+    {
+        set { hp = value; }
+    }
+
+
     public float Speed 
     {
         set { speed1 = value; }
@@ -54,6 +61,26 @@ public class FishControl : MonoBehaviour
             target1 = Camera.main.ViewportToWorldPoint(new Vector3(1, randomY, -Camera.main.transform.position.z));
         }
     }
+
+
+    public void Damage(int damageData) 
+    {
+        //reduce hp
+        hp -= damageData;
+        if (hp <= 0) 
+        {
+            //fish die
+            //BOOM!
+            GameObject explosionPrefab = Resources.Load<GameObject>("explosion");
+            //Instantiate BOOM!
+            GameObject explosionGo = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            //destory BOOM!
+            Destroy(explosionGo,1);
+            //destory fish
+            Destroy(gameObject);
+        }
+    }
+
 
 
     // Start is called before the first frame update
