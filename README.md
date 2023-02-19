@@ -1,2 +1,2 @@
 # Module1-Projects
- ApplePicker, Mission Demolition and Prototype 1
+  This is a fishing type game. The player launches the cannonball by manipulating the mouse (long press the left mouse button), and changes the position of the cannonball by moving the mouse. If the shell hits the fish, the fish will lose blood relatively. The initial speed and blood volume of each fish are random. The fish will be destroyed when the blood volume of the fish reaches 0.
