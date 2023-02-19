@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91489f673be4ea442ad4153a971ba57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 676310443}
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0

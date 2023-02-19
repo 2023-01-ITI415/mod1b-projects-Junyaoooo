@@ -11,7 +11,7 @@ public class CannonControl : MonoBehaviour
     //firepoint create place
     public Transform firePoint;
 
-
+    private GameObject firePrefab;
 
     public void CreateFire() 
     {
@@ -19,18 +19,27 @@ public class CannonControl : MonoBehaviour
         Vector3 dir = pos - transform.position;
         float angle = Vector3.Angle(Vector3.up, dir);
 
-        if (pos.x > 0) 
+        if (pos.x > transform.position.x) 
         {
             //click screen right side
             angle=-angle;
         }
 
         transform.eulerAngles=new Vector3(0, 0, angle);
+
+        //create fire
+        time += Time.deltaTime;
+        if (time >= timeInterval) 
+        {
+            time = 0;
+            GameObject fireGo = Instantiate(firePrefab, firePoint.position, firePoint.rotation);
+            Destroy(fireGo,4);
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        firePrefab = Resources.Load<GameObject>("fire");
     }
 
     // Update is called once per frame
